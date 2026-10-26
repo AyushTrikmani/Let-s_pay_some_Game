@@ -86,6 +86,11 @@ export default function GameList({ games, players, onDeleteGame }) {
                 </div>
             </div>
 
+            {/* Mobile Scroll Hint */}
+            <div className="mobile-scroll-hint">
+                <i className="fas fa-arrows-left-right"></i> Scroll table sideways to see all players
+            </div>
+
             {/* Simple, Clean Scorecard Table */}
             <div className="scorecard-table-wrapper">
                 <table className="scorecard-table">
