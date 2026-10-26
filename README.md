@@ -68,3 +68,13 @@ The optimized bundle will be created in the `dist/` directory.
 - **Declaring**: Call "Declare" when your hand total is ≤ 7 points.
 - **Successful Declare**: If you have strictly the lowest points, you score **0 points** for the round! Others take hand points.
 - **Failed Declare (Bust)**: If anyone has equal or lower points, you are CAUGHT! Lowest player gets 0, and you take **double hand points** as penalty!
+
+---
+
+## 👨‍💻 Author
+
+**Ayush Trikmani**
+- 💼 **LinkedIn**: [linkedin.com/in/ayush-trikmani](https://www.linkedin.com/in/ayush-trikmani/)
+- 🐙 **GitHub**: [@AyushTrikmani](https://github.com/AyushTrikmani)
+- 🌐 **Portfolio**: [ayush-trikmani-portfolio.vercel.app](https://ayush-trikmani-portfolio.vercel.app/)
+

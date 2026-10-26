@@ -223,6 +223,18 @@ export default function App() {
 
                 {/* Topbar Actions */}
                 <div className="topbar-actions">
+                    <a
+                        href="https://www.linkedin.com/in/ayush-trikmani/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="topbar-dev-badge"
+                        title="Developed by Ayush Trikmani - View LinkedIn"
+                        id="topbar-dev-badge"
+                    >
+                        <i className="fab fa-linkedin"></i>
+                        <span className="dev-badge-text">Developed by <strong>Ayush Trikmani</strong></span>
+                    </a>
+
                     <button
                         className="topbar-btn theme-toggle-btn"
                         onClick={toggleTheme}
@@ -287,6 +299,21 @@ export default function App() {
                     </div>
                 </div>
             </main>
+
+            {/* Minimal Footer */}
+            <footer className="declare-footer">
+                <p className="footer-credits-text">
+                    Designed &amp; Developed by{' '}
+                    <a
+                        href="https://www.linkedin.com/in/ayush-trikmani/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="footer-dev-link"
+                    >
+                        Ayush Trikmani
+                    </a>
+                </p>
+            </footer>
         </div>
     );
 }

@@ -222,6 +222,72 @@ html, body {
   gap: 0.6rem;
 }
 
+/* Developer Credit Badge in Topbar */
+.topbar-dev-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  height: 40px;
+  background: rgba(10, 102, 194, 0.12);
+  border: 1px solid rgba(10, 102, 194, 0.35);
+  border-radius: var(--radius-md);
+  color: #38bdf8;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.topbar-dev-badge i {
+  color: #0a66c2;
+  font-size: 1.15rem;
+  filter: drop-shadow(0 0 6px rgba(10, 102, 194, 0.45));
+  transition: transform 0.25s ease;
+}
+
+.topbar-dev-badge .dev-badge-text {
+  white-space: nowrap;
+}
+
+.topbar-dev-badge .dev-badge-text strong {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.topbar-dev-badge:hover {
+  background: rgba(10, 102, 194, 0.22);
+  border-color: #0a66c2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(10, 102, 194, 0.35);
+  color: #ffffff;
+}
+
+.topbar-dev-badge:hover i {
+  transform: scale(1.15);
+}
+
+body.light-mode .topbar-dev-badge {
+  background: #f0f7ff;
+  border-color: #bcdbfb;
+  color: #1e3a8a;
+  box-shadow: 0 2px 6px rgba(10, 102, 194, 0.08);
+}
+
+body.light-mode .topbar-dev-badge .dev-badge-text strong {
+  color: #0a66c2;
+}
+
+body.light-mode .topbar-dev-badge:hover {
+  background: #e0effe;
+  border-color: #0a66c2;
+  color: #004182;
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.18);
+}
+
 .topbar-btn {
   background: var(--bg-secondary);
   color: var(--text-primary);
@@ -4335,3 +4401,93 @@ body.light-mode .overall-leader-text strong {
     padding: 0.25rem 0.35rem !important;
   }
 }
+
+/* ==========================================================================
+   Minimal App Footer Styles
+   ========================================================================== */
+.declare-footer {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1.5rem 1.25rem 2.25rem;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  box-sizing: border-box;
+}
+
+.footer-credits-text {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.footer-dev-link {
+  color: #38bdf8;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.footer-dev-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #0a66c2;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s ease;
+}
+
+.footer-dev-link:hover {
+  color: #60a5fa;
+}
+
+.footer-dev-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+body.light-mode .footer-dev-link {
+  color: #0a66c2;
+}
+
+body.light-mode .footer-dev-link:hover {
+  color: #004182;
+}
+
+@media (max-width: 640px) {
+  .topbar-dev-badge {
+    padding: 0.35rem 0.6rem;
+    height: 36px;
+    font-size: 0.78rem;
+  }
+
+  .topbar-dev-badge .dev-badge-text {
+    display: none;
+  }
+
+  .topbar-dev-badge::after {
+    content: 'Ayush';
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  body.light-mode .topbar-dev-badge::after {
+    color: #0a66c2;
+  }
+
+  .footer-credits-text {
+    font-size: 0.85rem;
+  }
+}
+
+
